@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üzemanyag Költség Kalkulátor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #b6a43f;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: #ddc53b;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        h2, h3 {
+            color: #333;
+        }
+		
+		.eredmenyCont {
+			border: 1px solid black;
+			border-radius: 20px;
+            background-color: #c0b15bab;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Üzemanyag Költség Kalkulátor</h2>
+        <label for="benzinAr">Benzin ára (Ft/liter): </label>
+        <input type="number" id="benzinAr" placeholder="pl. 650"><br>
+        
+        <label for="utasok">Utasok száma: </label>
+        <input type="number" id="utasok" placeholder="pl. 4"><br>
+        
+        <label for="tavolsag">Megteendő távolság (km): </label>
+        <input type="number" id="tavolsag" placeholder="pl. 200"><br>
+        
+        <label for="fogyasztas">Fogyasztás (liter/100 km): </label>
+        <input type="number" id="fogyasztas" placeholder="pl. 7"><br>
+        
+        <button onclick="kiszamolKoltseg()">Számítás</button>
+        
+		<div class="eredmenyCont">
+			<h3>Eredmény:</h3>
+			<p id="eredmeny"></p>
+		</div>
+    </div>
+
+    <p style="text-align: center; margin-top: 30px;"><img src="revolut.jpg" alt="Revolut Logo" style="max-width: 400px;"></p>
+    
+    <script>
+        function kiszamolKoltseg() {
+            let benzinAr = parseFloat(document.getElementById('benzinAr').value);
+            let utasok = parseInt(document.getElementById('utasok').value);
+            let tavolsag = parseFloat(document.getElementById('tavolsag').value);
+            let fogyasztas = parseFloat(document.getElementById('fogyasztas').value);
+            
+            if (isNaN(benzinAr) || isNaN(utasok) || isNaN(tavolsag) || isNaN(fogyasztas) || utasok <= 0) {
+                document.getElementById('eredmeny').innerText = "Kérlek adj meg minden adatot helyesen!";
+                return;
+            }
+            
+            let osszFogyasztas = (tavolsag / 100) * fogyasztas;
+            let osszKoltseg = osszFogyasztas * benzinAr;
+            let fejenkentiKoltseg = osszKoltseg / utasok;
+            
+            document.getElementById('eredmeny').innerText = `Összköltség: ${osszKoltseg.toFixed(2)} Ft\nFejenkénti költség: ${fejenkentiKoltseg.toFixed(2)} Ft`;
+        }
+    </script>
+</body>
+</html>
