@@ -20,10 +20,8 @@ Ez a webalkalmazás segít kiszámolni az autós utazás fejenkénti költségé
 2. Kattints a **"Számol"** gombra
 3. Az oldal kiszámolja és kiírja a fejenkénti utazási költséget
 
-## 📈 Képlet
-
 ## 🌐 Demo
-👉 [Élő demó](#) *(Ha van feltöltött verziód pl. GitHub Pages-en, ide illeszd a linket)*
+👉 [Élő demó](https://igenja.github.io/autoCalc/) *(Ha van feltöltött verziód pl. GitHub Pages-en, ide illeszd a linket)*
 
 ## 📂 Telepítés (opcionális fejlesztőknek)
 
