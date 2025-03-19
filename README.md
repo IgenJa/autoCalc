@@ -1,31 +1,26 @@
-https://igenja.github.io/autoCalc/
+# 🚗 Trip Cost Calculator
 
-# 🚗 Útiköltség Kalkulátor
+This web application helps calculate the per-person cost of a car trip based on the distance, fuel price, car consumption, and the number of passengers.
 
-Ez a webalkalmazás segít kiszámolni az autós utazás fejenkénti költségét a távolság, az üzemanyag ára, az autó fogyasztása és az utasok száma alapján.
+## 🔧 Features
+- Enter distance (km)
+- Enter fuel price (HUF per liter)
+- Enter car fuel consumption (liters / 100 km)
+- Enter the number of passengers
+- Instantly calculate the cost per person
 
-## 🔧 Funkciók
-- Távolság megadása (km)
-- Üzemanyagár megadása (Ft / liter)
-- Autó fogyasztása (liter / 100 km)
-- Utasok száma
-- Fejenkénti költség azonnali számítása
-
-## 💻 Használat
-1. Add meg az utazás adatait az űrlapban:
-   - **Távolság** km-ben
-   - **Benzin ára** Ft / liter
-   - **Fogyasztás** liter / 100 km
-   - **Utasok száma** (sofőrrel együtt)
-2. Kattints a **"Számol"** gombra
-3. Az oldal kiszámolja és kiírja a fejenkénti utazási költséget
+## 💻 How to Use
+1. Fill in the trip details in the form:
+   - **Distance** in kilometers
+   - **Fuel price** in HUF per liter
+   - **Consumption** in liters / 100 km
+   - **Number of passengers** (including the driver)
+2. Click the **"Calculate"** button
+3. The app will calculate and display the cost per person
 
 ## 🌐 Demo
-👉 [Élő demó](https://igenja.github.io/autoCalc/) *(Ha van feltöltött verziód pl. GitHub Pages-en, ide illeszd a linket)*
+👉 [Live Demo](https://igenja.github.io/autoCalc/)
 
-## 📂 Telepítés (opcionális fejlesztőknek)
+## 📂 Installation
 
-Majd nyisd meg a `index.html` fájlt böngészőben.
-
-## ✅ Készítette
-- [Neved vagy GitHub profilod](https://github.com/felhasznalonev)
+📱 **Note:** A mobile application is currently in development.
